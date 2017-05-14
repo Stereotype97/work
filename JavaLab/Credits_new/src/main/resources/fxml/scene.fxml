@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0"
+            xmlns="http://javafx.com/javafx/8.0.91" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ua.kpi.tef.Controller">
+  <children>
+    <Label fx:id="creditGoal" layoutX="108.0" layoutY="90.0" prefHeight="30.0" prefWidth="78.0" text="Цель кредита" />
+    <ComboBox id="comboBox" fx:id="comboBoxGoalCredit" layoutX="198.0" layoutY="93.0" promptText="Не указана">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:id="check1Goal" fx:value="Покупка авто" />
+          <String fx:id="check2Goal" fx:value="Покупка недвижимости" />
+          <String fx:id="check3Goal" fx:value="Открытие малого бизнеса" />
+        </FXCollections>
+      </items>
+    </ComboBox>
+    <Label id="choice" fx:id="choiceCreditGoal" layoutX="350.0" layoutY="23.0" prefHeight="47.0" prefWidth="186.0" text="Выбор целевого кредита">
+      <font>
+        <Font size="16.0" />
+      </font>
+    </Label>
+    <Button fx:id="showAllVariants" layoutX="536.0" layoutY="93.0" mnemonicParsing="false" onAction="#showAllVariant" text="Показать все варианты" />
+    <TextField id="textIndex" fx:id="indexField" layoutX="439.0" layoutY="161.0" prefHeight="25.0" prefWidth="76.0" text="    0/0" />
+    <Button fx:id="previous" defaultButton="true" disable="true" layoutY="235.0" mnemonicParsing="false" onAction="#onPrevClick" text="&lt;--" AnchorPane.leftAnchor="50.0" />
+    <Button fx:id="next" defaultButton="true" disable="true" mnemonicParsing="false" onAction="#onNextClick" text="--&gt;" wrapText="false" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="235.0" />
+    <Label fx:id="bank" layoutX="245.0" layoutY="205.0" prefWidth="65.0" text="Банк" />
+    <Label fx:id="percent" layoutX="245.0" layoutY="272.0" text="Процентная ставка, %" />
+    <Label fx:id="term" layoutX="245.0" layoutY="306.0" text="Срок погашения" />
+    <Label fx:id="redemption" layoutX="246.0" layoutY="344.0" text="Способ погашения" />
+    <TextField fx:id="bankField" layoutX="371.0" layoutY="202.0" prefWidth="200.0" promptText="ПриватБанк" />
+      <TextField fx:id="goalField" layoutX="369.0" layoutY="235.0" prefHeight="25.0" prefWidth="200.0" promptText="Покупка авто" />
+    <TextField fx:id="percentField" layoutX="371.0" layoutY="269.0" prefWidth="200.0" promptText="17" />
+    <TextField id="yearsFields" fx:id="termField" layoutX="371.0" layoutY="306.0" prefWidth="200.0" promptText="3" />
+    <TextField id="redeption" fx:id="redemptionField" layoutX="372.0" layoutY="344.0" prefWidth="200.0" promptText="Аннуитет или классический" />
+    <Label fx:id="choiceBank" layoutX="18.0" layoutY="488.0" text="Выбрать банк" />
+    <ComboBox fx:id="comboBoxBank" layoutX="108.0" layoutY="484.0" prefHeight="25.0" prefWidth="122.0" promptText="Не выбирать">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:id="checkBank" fx:value="Не выбирать" />
+          <String fx:id="check1Bank" fx:value="ПриватБанк" />
+          <String fx:id="check2Bank" fx:value="Ощадбанк" />
+          <String fx:id="check3Bank" fx:value="Тинькофф" />
+        </FXCollections>
+      </items>
+    </ComboBox>
+    <Label fx:id="choicePercent" layoutX="239.0" layoutY="487.0" text="Выбрать процентную ставку" />
+    <ComboBox fx:id="comboBoxPercent" layoutX="408.0" layoutY="488.0" promptText="Не выбирать">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Не выбирать" />
+          <String fx:value="5" />
+          <String fx:value="7" />
+          <String fx:value="15" />
+          <String fx:value="22" />
+        </FXCollections>
+      </items>
+    </ComboBox>
+    <Label fx:id="index" layoutX="386.0" layoutY="164.0" prefWidth="46.0" text="Индекс" />
+    <Label fx:id="numberSuitableCredits" layoutX="319.0" layoutY="134.0" text="Набор подходящих кредитов">
+      <font>
+        <Font size="14.0" />
+      </font>
+    </Label>
+    <Label fx:id="choiceTerm" layoutX="534.0" layoutY="490.0" text="Выбрать срок погашения" />
+    <ComboBox fx:id="comboBoxTerm" layoutX="681.0" layoutY="488.0" promptText="Не выбирать">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+            <String fx:value="Не выбирать" />
+            <String fx:value="3" />
+            <String fx:value="5" />
+            <String fx:value="3" />
+            <String fx:value="5" />
+            <String fx:value="5" />
+        </FXCollections>
+      </items>
+    </ComboBox>
+    <Button fx:id="choiceThisCredit" cancelButton="false" defaultButton="true" disable="true" layoutX="333.0" layoutY="415.0" mnemonicParsing="false" onAction="#finish" text="Выбрать этот кредит" />
+    <MenuBar fx:id="menuBar" layoutX="2.0" layoutY="2.0" prefWidth="798.0">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+            <MenuItem mnemonicParsing="false" text="Close" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Edit">
+          <items>
+            <MenuItem mnemonicParsing="false" text="Delete" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <Button fx:id="russian" layoutX="741.0" layoutY="31.0" mnemonicParsing="false" onAction="#setRuLocale" text="RU" />
+    <Button fx:id="english" layoutX="702.0" layoutY="31.0" mnemonicParsing="false" onAction="#setEnLocale" text="EN" />
+      <Button fx:id="addFilterBank" layoutX="29.0" layoutY="531.0" mnemonicParsing="false" onAction="#sortByBank" text="Добавить фильтр на имя банка" />
+      <Button fx:id="addFilterPercent" layoutX="252.0" layoutY="531.0" mnemonicParsing="false" onAction="#sortByPercent" prefHeight="25.0" prefWidth="188.0" text="Добавить фильтр на процент" />
+      <Label fx:id="creditGoal1" layoutX="246.0" layoutY="233.0" prefHeight="30.0" prefWidth="78.0" text="Цель кредита" />
+      <Button fx:id="addFilterGoal" layoutX="108.0" layoutY="122.0" mnemonicParsing="false" onAction="#sortByGoal" text="Добавить фильтр на цель" />
+
+  </children>
+</AnchorPane>

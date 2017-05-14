@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?scenebuilder-background-color 0xffe299ff?>
+
+<AnchorPane id="AnchorPane" cache="false" disable="false" focusTraversable="true" maxHeight="600.0" maxWidth="800.0" minHeight="600.0" minWidth="800.0"
+            mouseTransparent="false" prefHeight="600.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2"
+            fx:controller="ua.kpi.tef.Controller">
+  <children>
+    <Label minHeight="14.0" prefHeight="30.0" prefWidth="200.0" text="Библиотечный каталог" AnchorPane.leftAnchor="315.0" AnchorPane.topAnchor="30.0">
+      <font>
+        <Font name="System Bold Italic" size="16.0" />
+      </font>
+    </Label>
+    <Button fx:id="look" layoutX="246.0" layoutY="79.0" mnemonicParsing="false" onAction="#onLookClick" prefHeight="22.0" prefWidth="158.0" text="Просмотр" />
+    <TextField fx:id="textIndex" layoutX="505.0" layoutY="79.0" prefWidth="54.0" text="    0/0" />
+    <Label layoutX="457.0" layoutY="79.0" prefHeight="22.0" prefWidth="46.0" text="Индекс" />
+    <Button fx:id="left" defaultButton="true" disable="true" layoutY="129.0" mnemonicParsing="false" onAction="#onLeftClick" text="&lt;--" AnchorPane.leftAnchor="50.0" />
+    <Button fx:id="right" defaultButton="true" disable="true" layoutY="130.0" mnemonicParsing="false" onAction="#onRightClick" text="--&gt;" wrapText="false" AnchorPane.rightAnchor="50.0" />
+    <TextField fx:id="textName" layoutX="361.0" layoutY="190.0" prefWidth="200.0" promptText="Чистый код" text="" />
+    <TextField id="textSurname" fx:id="textSurnameAuthor" layoutX="361.0" layoutY="217.0" prefWidth="200.0" promptText="Мартин" />
+    <TextField id="textName" fx:id="textNameAuthor" layoutX="361.0" layoutY="248.0" prefWidth="200.0" promptText="Роберт" />
+    <TextField fx:id="textPublishing" layoutX="361.0" layoutY="283.0" prefWidth="200.0" promptText="Питер" />
+    <TextField fx:id="textYearPublished" layoutX="361.0" layoutY="313.0" prefWidth="200.0" promptText="2016" />
+    <TextField fx:id="textPrice" layoutX="361.0" layoutY="345.0" prefWidth="200.0" promptText="334.00" text="" />
+    <Label layoutX="246.0" layoutY="193.0" prefWidth="86.0" text="Наименование" />
+    <Label layoutX="246.0" layoutY="220.0" prefWidth="86.0" text="Фамилия " />
+    <Label layoutX="246.0" layoutY="251.0" prefWidth="86.0" text="Имя" />
+    <Label layoutX="246.0" layoutY="286.0" prefWidth="86.0" text="Издательство" />
+    <Label layoutX="246.0" layoutY="316.0" prefWidth="86.0" text="Год издания" />
+    <Label layoutX="246.0" layoutY="348.0" prefWidth="86.0" text="Цена книги" />
+    <Label layoutX="246.0" layoutY="161.0" prefWidth="86.0" text="ISBN" />
+    <TextField fx:id="textISBN" layoutX="361.0" layoutY="158.0" prefWidth="200.0" promptText="978-5-496-00487-9" />
+    <Label layoutX="176.0" layoutY="427.0" minHeight="13.0" prefHeight="19.0" prefWidth="79.00009999999747" text="Новая цена" />
+    <TextField fx:id="textNewPrice" layoutX="261.0" layoutY="426.0" prefWidth="200.0" />
+    <Button fx:id="changePrice" layoutX="522.0" layoutY="427.0" mnemonicParsing="false" onAction="#onChangePriceClick" text="Изменить" />
+    <Label layoutX="225.0" layoutY="505.0" prefWidth="86.0" text="Сортировка по" />
+    <ComboBox fx:id="comboBox" disable="false" editable="false" layoutX="315.0" layoutY="503.0" prefHeight="21.0" prefWidth="158.0" promptText="критерии" visibleRowCount="12">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+            <String fx:id="check1" fx:value="ISBN" />
+            <String fx:id="check2" fx:value="фамилии автора" />
+            <String fx:id="check3" fx:value="цене книги" />
+        </FXCollections>
+      </items>
+    </ComboBox>
+    <Button fx:id="sort" layoutX="505.0" layoutY="503.0" mnemonicParsing="false" onAction="#onSortClick" text="Сортировать" />
+    <MenuBar layoutX="0.0" layoutY="0.0" prefWidth="800.0">
+      <menus>
+        <Menu mnemonicParsing="false" text="Файл">
+          <items>
+            <MenuItem mnemonicParsing="false" text="Выйти" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Редактирование">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#clearAllFields" text="Очистить поля" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Помощь">
+          <items>
+            <MenuItem mnemonicParsing="false" text="О программе" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+  </children>
+</AnchorPane>
