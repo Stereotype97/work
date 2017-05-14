@@ -1,0 +1,6 @@
+c:\users\димон\documents\visual studio 2015\Projects\OOP_2 lab 5-7\OOP_2 lab 5-7\bin\Debug\OOP_2 lab 5-7.exe.config
+c:\users\димон\documents\visual studio 2015\Projects\OOP_2 lab 5-7\OOP_2 lab 5-7\bin\Debug\OOP_2 lab 5-7.exe
+c:\users\димон\documents\visual studio 2015\Projects\OOP_2 lab 5-7\OOP_2 lab 5-7\bin\Debug\OOP_2 lab 5-7.pdb
+c:\users\димон\documents\visual studio 2015\Projects\OOP_2 lab 5-7\OOP_2 lab 5-7\obj\Debug\OOP_2 lab 5-7.csprojResolveAssemblyReference.cache
+c:\users\димон\documents\visual studio 2015\Projects\OOP_2 lab 5-7\OOP_2 lab 5-7\obj\Debug\OOP_2 lab 5-7.exe
+c:\users\димон\documents\visual studio 2015\Projects\OOP_2 lab 5-7\OOP_2 lab 5-7\obj\Debug\OOP_2 lab 5-7.pdb

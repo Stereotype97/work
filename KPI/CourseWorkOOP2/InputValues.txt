@@ -1,0 +1,4 @@
+1 2 5 3,25 90 How do you do?
+4 9 28 5 75 I am fine?
+0 0 8,75 4,5 125 Circle
+-3 19 26 18 150 Yellow

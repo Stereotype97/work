@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/">
+        <file>EnterWind.qml</file>
+        <file>CustomButton.qml</file>
+        <file>CustomTextField.qml</file>
+        <file>WindowApp.qml</file>
+        <file>main.qml</file>
+    </qresource>
+    <qresource prefix="/source">
+        <file>Bufny.jpg</file>
+    </qresource>
+</RCC>
